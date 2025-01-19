@@ -1,0 +1,367 @@
+{
+    "CommonPrefixMods": {
+        "description": "Common prefix mods that can appear on any tablet type",
+        "mods": [
+            {
+                "id": "MapDroppedItemQuantityIncrease",
+                "name": "(10–20)% increased Quantity of Items found in your Maps",
+                "minValue": 10,
+                "maxValue": 20
+            },
+            {
+                "id": "MapDroppedItemRarityIncrease",
+                "name": "(10–20)% increased Rarity of Items found in your Maps",
+                "minValue": 10,
+                "maxValue": 20
+            },
+            {
+                "id": "MapPackSizeIncrease",
+                "name": "(3–8)% increased Pack Size in your Maps",
+                "minValue": 3,
+                "maxValue": 8
+            },
+            {
+                "id": "MapMagicPackIncrease",
+                "name": "(15–25)% increased Magic Monsters in your Maps",
+                "minValue": 15,
+                "maxValue": 25
+            },
+            {
+                "id": "MapRarePackIncrease",
+                "name": "(10–15)% increased Rare Monsters in your Maps",
+                "minValue": 10,
+                "maxValue": 15
+            },
+            {
+                "id": "MapDroppedGoldIncrease",
+                "name": "(5–10)% increased Gold found in your Maps",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "MapExperienceGainIncrease",
+                "name": "(5–10)% increased Experience gain in your Maps",
+                "minValue": 5,
+                "maxValue": 10
+            }
+        ]
+    },
+    "BreachTabletMods": {
+        "description": "Mods that can appear on Breach tablets",
+        "mods": [
+            {
+                "id": "BreachMagicMonsterIncrease",
+                "name": "Breaches in your Maps spawn (15–25)% increased Magic Monsters",
+                "minValue": 15,
+                "maxValue": 25
+            },
+            {
+                "id": "BreachRareMonsterIncrease",
+                "name": "Breaches in your Maps spawn an additional Rare Monster",
+                "minValue": 1,
+                "maxValue": 1
+            },
+            {
+                "id": "BreachDensityIncrease",
+                "name": "Breaches in your Maps have (5–10)% increased Monster density",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "BreachSpeedIncrease",
+                "name": "Breaches in your Maps have (8–12)% increased Monster density Breaches in your Maps open and close (5–10)% faster ",
+                "minValue": 8,
+                "maxValue": 12
+            },
+            {
+                "id": "BreachChestAdditional",
+                "name": "Breaches in your Maps contain 1 additional Clasped Hand",
+                "minValue": 1,
+                "maxValue": 1
+            },
+            {
+                "id": "BreachMonsterSplinterIncrease",
+                "name": "(5–10)% increased Quantity of Breach Splinters dropped by Breach Monsters in your Maps",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "Breach3AdditionalChance",
+                "name": "Your Maps which contain Breaches have (2–4)% chance to contain three additional Breaches",
+                "minValue": 2,
+                "maxValue": 4
+            },
+            {
+                "id": "BreachAdditionalChance",
+                "name": "Your Maps which contain Breaches have (5–10)% chance to contain an additional Breach",
+                "minValue": 5,
+                "maxValue": 10
+            }
+        ]
+    },
+    "RitualTabletMods": {
+        "description": "Mods that can appear on Ritual tablets",
+        "mods": [
+            {
+                "id": "RitualTributeIncrease",
+                "name": "Monsters Sacrificed at Ritual Altars in your Maps grant (5–10)% increased Tribute",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "RitualRerollCostIncrease",
+                "name": "Rerolling Favours at Ritual Altars in your Maps costs (10–15)% reduced Tribute",
+                "minValue": 10,
+                "maxValue": 15
+            },
+            {
+                "id": "RitualDeferCostIncrease",
+                "name": "Deferring Favours at Ritual Altars in your Maps costs (10–15)% reduced Tribute",
+                "minValue": 10,
+                "maxValue": 15
+            },
+            {
+                "id": "RitualDeferSpeed",
+                "name": "Favours Deferred at Ritual Altars in your Maps reappear (10–15)% sooner",
+                "minValue": 10,
+                "maxValue": 15
+            },
+            {
+                "id": "RitualAdditionalReroll",
+                "name": "Ritual Altars in your Maps allow rerolling Favours an additional time",
+                "minValue": 1,
+                "maxValue": 1
+            },
+            {
+                "id": "RitualChanceForNoCost",
+                "name": "Favours Rerolled at Ritual Altars in your Maps have (1–3)% chance to cost no Tribute",
+                "minValue": 1,
+                "maxValue": 3
+            },
+            {
+                "id": "RitualRareMonsters",
+                "name": "Revived Monsters from Ritual Altars in your Maps have (15–25)% increased chance to be Magic",
+                "minValue": 15,
+                "maxValue": 25
+            },
+            {
+                "id": "RitualMagicMonsters",
+                "name": "Revived Monsters from Ritual Altars in your Maps have (10–15)% increased chance to be Rare",
+                "minValue": 10,
+                "maxValue": 15
+            },
+            {
+                "id": "RitualOmenChance",
+                "name": "Ritual Favours in your Maps have (5–10)% increased chance to contain Omens",
+                "minValue": 5,
+                "maxValue": 10
+            }
+        ]
+    },
+    "OverseerTabletMods": {
+        "description": "Mods that can appear on Overseer tablets",
+        "mods": [
+            {
+                "id": "MapBossAdditionalStrongbox",
+                "name": "Areas with Map Bosses contain an additional Strongbox",
+                "minValue": 1,
+                "maxValue": 1
+            },
+            {
+                "id": "MapBossAdditionalShrine",
+                "name": "Areas with Map Bosses contain an additional Shrine",
+                "minValue": 1,
+                "maxValue": 1
+            },
+            {
+                "id": "MapBossAdditionalEssence",
+                "name": "Areas with Map Bosses contain an additional Essence",
+                "minValue": 1,
+                "maxValue": 1
+            },
+            {
+                "id": "MapBossWaystoneChance",
+                "name": "Map Boss has +(10–20)% chance to drop a Waystone of the current tier or higher",
+                "minValue": 10,
+                "maxValue": 20
+            },
+            {
+                "id": "MapBossExperience",
+                "name": "Map Bosses grant (20–40)% increased Experience",
+                "minValue": 20,
+                "maxValue": 40
+            },
+            {
+                "id": "MapBossRarity",
+                "name": "(15–25)% increased Rarity of Items dropped by Map Bosses",
+                "minValue": 15,
+                "maxValue": 25
+            },
+            {
+                "id": "MapBossQuantity",
+                "name": "(10–15)% increased Quantity of Items dropped by Map Bosses",
+                "minValue": 10,
+                "maxValue": 15
+            }
+        ]
+    },
+    "ExpeditionTabletMods": {
+        "description": "Mods that can appear on Expedition tablets",
+        "mods": [
+            {
+                "id": "ExpeditionArtifactIncrease",
+                "name": "(5–10)% increased quantity of Artifacts dropped by Monsters in your Maps",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "ExpeditionExplosionPlacement",
+                "name": "(5–10)% increased Explosive Placement Range in your Maps",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "ExpeditionRelicIncrease",
+                "name": "Expeditions in your Maps have +1 Remnant",
+                "minValue": 1,
+                "maxValue": 1
+            },
+            {
+                "id": "ExpeditionExplosionRadius",
+                "name": "(5–10)% increased Explosive Radius in your Maps",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "ExpeditionLogbookIncrease",
+                "name": "(5–10)% increased Quantity of Expedition Logbooks dropped by Runic Monsters in your Maps",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "ExpeditionRareMonsters",
+                "name": "(10–15)% increased number of Rare Expedition Monsters in your Maps",
+                "minValue": 10,
+                "maxValue": 15
+            },
+            {
+                "id": "ExpeditionRelicModEffect",
+                "name": "(3–6)% increased Effect of Remnants in your Maps",
+                "minValue": 3,
+                "maxValue": 6
+            },
+            {
+                "id": "ExpeditionRunicMonsters",
+                "name": "Your Maps contain (5–10)% increased number of Runic Monster Markers",
+                "minValue": 5,
+                "maxValue": 10
+            }
+        ]
+    },
+    "DeliriumTabletMods": {
+        "description": "Mods that can appear on Delirium tablets",
+        "mods": [
+            {
+                "id": "DeliriumMonsterSplinterIncrease",
+                "name": "(5–10)% increased Stack size of Simulacrum Splinters found in your Maps",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "DeliriumRewardProgressIncrease",
+                "name": "Delirious Monsters Killed in your Maps provide (5–10)% increased Reward Progress",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "DeliriumFogDissipationDelay",
+                "name": "Delirium Fog in your Maps lasts (3–6) additional seconds before dissipating",
+                "minValue": 3,
+                "maxValue": 6
+            },
+            {
+                "id": "DeliriumFogPersistence",
+                "name": "Delirium Fog in your Maps dissipates (10–15)% slower",
+                "minValue": 10,
+                "maxValue": 15
+            },
+            {
+                "id": "DeliriumDifficultyIncrease",
+                "name": "Delirium in your Maps increases (5–10)% faster with distance from the mirror",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "DeliriumPackSizeIncrease",
+                "name": "Delirium Monsters in your Maps have (5–10)% increased Pack Size",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "DeliriumDoodadsIncrease",
+                "name": "Delirium Fog in your Maps spawns (5–10)% increased Fracturing Mirrors",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "DeliriumRareMonsterPause",
+                "name": "Slaying Rare Monsters in your Maps pauses the Delirium Mirror Timer for 2 seconds",
+                "minValue": 2,
+                "maxValue": 2
+            },
+            {
+                "id": "DeliriumBossChance",
+                "name": "Delirium Encounters in your Maps are (5–10)% more likely to spawn Unique Bosses",
+                "minValue": 5,
+                "maxValue": 10
+            },
+            {
+                "id": "DeliriumAdditionalRewardType",
+                "name": "Delirium Encounters in your Maps have (3–8)% chance to generate an additional Reward type",
+                "minValue": 3,
+                "maxValue": 8
+            }
+        ]
+    },
+    "PrecursorTabletMods": {
+        "description": "Mods that can appear on Precursor tablets",
+        "mods": [
+            {
+                "id": "MapDroppedMapsIncrease",
+                "name": "(10–20)% increased Quantity of Waystones found in your Maps",
+                "minValue": 10,
+                "maxValue": 20
+            },
+            {
+                "id": "MapRareMonstersAdditionalModifier",
+                "name": "Rare Monsters in your Maps have a (20–30)% chance to have an additional Modifier",
+                "minValue": 20,
+                "maxValue": 30
+            },
+            {
+                "id": "MapAdditionalShrine",
+                "name": "Your Maps have +(10–20)% chance to contain a Shrine",
+                "minValue": 10,
+                "maxValue": 20
+            },
+            {
+                "id": "MapAdditionalStrongbox",
+                "name": "Your Maps have +(10–20)% chance to contain a Strongbox",
+                "minValue": 10,
+                "maxValue": 20
+            },
+            {
+                "id": "MapAdditionalEssence",
+                "name": "Your Maps have +(10–20)% chance to contain an Essence",
+                "minValue": 10,
+                "maxValue": 20
+            },
+            {
+                "id": "MapAdditionalModifier",
+                "name": "Your Maps have 1 additional random Modifier",
+                "minValue": 1,
+                "maxValue": 1
+            }
+        ]
+    }
+}
