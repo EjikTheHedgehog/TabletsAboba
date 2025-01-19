@@ -25,8 +25,10 @@ public class Tablets : BaseSettingsPlugin<TabletsSettings>
         _updateTimer.Start();
         return true;
     }
-    private bool IsStashOpen() => GameController.Game.IngameState.IngameUi.StashElement.IsVisible;
-    private bool IsTabletItem(Entity item) => item.Path.Contains("Metadata/Items/TowerAugment");
+    private bool IsStashOpen() => 
+        GameController?.Game?.IngameState?.IngameUi?.StashElement?.IsVisible == true;
+
+    private bool IsTabletItem(Entity item) => item?.Path.Contains("Metadata/Items/TowerAugment") == true;
 
     // ==========================================================
     // ===================== Tick Update ========================
@@ -43,12 +45,17 @@ public class Tablets : BaseSettingsPlugin<TabletsSettings>
         if (!IsStashOpen())
             return;
 
-        var stash = GameController.Game.IngameState.IngameUi.StashElement;
+        var stash = GameController?.Game?.IngameState?.IngameUi?.StashElement;
+        if (stash == null || stash.VisibleStash == null)
+            return;
+
         var items = stash.VisibleStash.VisibleInventoryItems;
+        if (items == null)
+            return;
 
         foreach (var item in items)
         {
-            if (!IsTabletItem(item.Item))
+            if (item?.Item == null || !IsTabletItem(item.Item))
                 continue;
 
             if (!ShouldRenderTablet(item.Item))
@@ -81,7 +88,7 @@ public class Tablets : BaseSettingsPlugin<TabletsSettings>
     // Generated: Determines if a tablet should be highlighted based on its mods and settings
     private bool ShouldRenderTablet(Entity item)
     {
-        var mods = item.GetComponent<Mods>();
+        var mods = item?.GetComponent<Mods>();
         if (mods == null) return false;
 
         var rarity = mods.ItemRarity.ToString();
