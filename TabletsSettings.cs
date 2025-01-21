@@ -1,6 +1,7 @@
 ﻿using ExileCore2.Shared.Interfaces;
 using ExileCore2.Shared.Nodes;
 using ExileCore2.Shared.Attributes;
+using System.Drawing;
 
 namespace Tablets;
 
@@ -18,7 +19,17 @@ public class TabletsSettings : ISettings
     public ExpeditionTabletSettings ExpeditionTabletSettings { get; set; } = new ExpeditionTabletSettings();
     public DeliriumTabletSettings DeliriumTabletSettings { get; set; } = new DeliriumTabletSettings();
     public PrecursorTabletSettings PrecursorTabletSettings { get; set; } = new PrecursorTabletSettings();
+    public BorderRenderSettings BorderRenderSettings { get; set; } = new BorderRenderSettings();
     public ToggleNode Enable { get; set; } = new ToggleNode(false);
+}
+
+[Submenu(CollapsedByDefault = false)]
+public class BorderRenderSettings
+{
+    public ColorNode NormalBorderColor { get; set; } = new ColorNode(Color.White);
+    public ColorNode TwoModBorderColor { get; set; } = new ColorNode(Color.Blue);
+    public ColorNode BadTabletBorderColor { get; set; } = new ColorNode(Color.Red);
+    public ColorNode LowMapsInRangeBorderColor { get; set; } = new ColorNode(Color.Gray);
 }
 
 [Submenu(CollapsedByDefault = true)]

@@ -25,8 +25,9 @@ public class Tablets : BaseSettingsPlugin<TabletsSettings>
         _updateTimer.Start();
         return true;
     }
-    private bool IsStashOpen() => GameController.Game.IngameState.IngameUi.StashElement.IsVisible;
-    private bool IsTabletItem(Entity item) => item.Path.Contains("Metadata/Items/TowerAugment");
+    private bool IsStashOpen() => 
+        GameController?.Game?.IngameState?.IngameUi?.StashElement?.IsVisible == true;
+    private bool IsTabletItem(Entity item) => item?.Path.Contains("Metadata/Items/TowerAugment") == true;
 
     // ==========================================================
     // ===================== Tick Update ========================
@@ -43,12 +44,15 @@ public class Tablets : BaseSettingsPlugin<TabletsSettings>
         if (!IsStashOpen())
             return;
 
-        var stash = GameController.Game.IngameState.IngameUi.StashElement;
+        var stash = GameController?.Game?.IngameState?.IngameUi?.StashElement;
+            if (stash == null || stash.VisibleStash == null)
+                return;
         var items = stash.VisibleStash.VisibleInventoryItems;
-
+            if (items == null)
+                return;
         foreach (var item in items)
         {
-            if (!IsTabletItem(item.Item))
+            if (item?.Item == null || !IsTabletItem(item.Item))
                 continue;
 
             if (!ShouldRenderTablet(item.Item))
@@ -81,7 +85,7 @@ public class Tablets : BaseSettingsPlugin<TabletsSettings>
     // Generated: Determines if a tablet should be highlighted based on its mods and settings
     private bool ShouldRenderTablet(Entity item)
     {
-        var mods = item.GetComponent<Mods>();
+        var mods = item?.GetComponent<Mods>();
         if (mods == null) return false;
 
         var rarity = mods.ItemRarity.ToString();
@@ -160,11 +164,11 @@ public class Tablets : BaseSettingsPlugin<TabletsSettings>
     // ==========================================================
     // =================== Checking mods ========================
     // ==========================================================
-    // Generated: Determines the highlight color based on tablet quality and enabled mods
+    // Generated: Determines the highlight color based on tablet quality and settings colors
     private Color GetFrameColorByMods(Entity item)
     {
         var mods = item?.GetComponent<Mods>();
-        if (mods == null) return Color.Gray;
+        if (mods == null) return Settings.BorderRenderSettings.BadTabletBorderColor;
 
         if (Settings.DrawLowMapsInRangeTablets)
         {
@@ -175,7 +179,7 @@ public class Tablets : BaseSettingsPlugin<TabletsSettings>
                     int towerValue = mod.Values.Count > 0 ? mod.Values[0] : 0;
                     if (towerValue < Settings.MapsInRange.Value)
                     {
-                        return Color.Gray;
+                        return Settings.BorderRenderSettings.LowMapsInRangeBorderColor;
                     }
                 }
             }
@@ -184,10 +188,10 @@ public class Tablets : BaseSettingsPlugin<TabletsSettings>
         var modsCount = mods.ItemMods.Count;
 
         if (modsCount == 1)
-            return Color.White;
+            return Settings.BorderRenderSettings.NormalBorderColor;
 
         if (modsCount == 2)
-            return Color.Blue;
+            return Settings.BorderRenderSettings.TwoModBorderColor;
 
         if (modsCount == 3)
         {
@@ -217,13 +221,13 @@ public class Tablets : BaseSettingsPlugin<TabletsSettings>
 
             if (hasValidMapInRange && enabledModsCount == 2)
             {
-                return Color.Green;
+                return Settings.BorderRenderSettings.TwoModBorderColor;
             }
 
-            return Color.Red;
+            return Settings.BorderRenderSettings.BadTabletBorderColor;
         }
 
-        return Color.Gray;
+        return Settings.BorderRenderSettings.BadTabletBorderColor;
     }
 
     private bool IsMapInRangeMod(ItemMod mod)
