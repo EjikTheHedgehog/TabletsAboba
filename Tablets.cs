@@ -60,7 +60,7 @@ public class Tablets : BaseSettingsPlugin<TabletsSettings>
 
             var color = GetFrameColorByMods(item.Item);
 
-            if (Settings.HideBadTablets && color == Color.Red)
+            if (Settings.HideBadTablets && color == Settings.BorderRenderSettings.BadTabletBorderColor)
                 continue;
 
             var rect = item.GetClientRect();
@@ -221,7 +221,7 @@ public class Tablets : BaseSettingsPlugin<TabletsSettings>
 
             if (hasValidMapInRange && enabledModsCount == 2)
             {
-                return Settings.BorderRenderSettings.TwoModBorderColor;
+                return Settings.BorderRenderSettings.ReadyToGoBorderColor;
             }
 
             return Settings.BorderRenderSettings.BadTabletBorderColor;

@@ -29,6 +29,7 @@ public class BorderRenderSettings
     public ColorNode NormalBorderColor { get; set; } = new ColorNode(Color.White);
     public ColorNode TwoModBorderColor { get; set; } = new ColorNode(Color.Blue);
     public ColorNode BadTabletBorderColor { get; set; } = new ColorNode(Color.Red);
+    public ColorNode ReadyToGoBorderColor { get; set; } = new ColorNode(Color.Green);
     public ColorNode LowMapsInRangeBorderColor { get; set; } = new ColorNode(Color.Gray);
 }
 
